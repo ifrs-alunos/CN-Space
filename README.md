@@ -10,6 +10,7 @@ Os responsáveis pelo desenvolvimento deste projeto são os alunos do Instituto 
 1. Isadora Bueno do Canto;
 2. Mateus Freitas Charloto;
 3. Pietra Rodrigues Rosa.
+
 Todos os membros do grupo possuem experiência no desenvolvimento de aplicações web (*front-end*) e na linguagem de programação Python 3.0.
 
 __Quais as principais funcionalidades?__
