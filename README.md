@@ -23,6 +23,12 @@ As funcionalidades da aplicação possibilitarão ao usuário:
 	* Personagens Principais  
   
 2. Criar e gerenciar um perfil pessoal;
+	No cadastro serão requisitados:  
+	* Nome de usuário  
+  	* Apelido  
+	* E-mail  
+	* Senha  
+
 3. Postar conteúdos em geral, como *fanarts* e *fanfics*, por exemplo;
 4. Interagir com a comunidade cadastrada, sendo possível comentar, favoritar e compartilhar publicações de outros usuários;
 5. Utilizar e acessar *tags* com direcionamento de conteúdo.
