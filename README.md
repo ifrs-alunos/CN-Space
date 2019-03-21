@@ -18,9 +18,9 @@ Todos os membros do grupo possuem experiência no desenvolvimento de aplicaçõe
 As funcionalidades da aplicação possibilitarão ao usuário:
 1. Acessar conteúdos com informações gerais publicadas pelos desenvolvedores sobre as animações;  
 	Cada página conterá dados como:  
-		* Sinopse  
+	* Sinopse  
   	* Imagens  
-		* Personagens Principais  
+	* Personagens Principais  
   
 2. Criar e gerenciar um perfil pessoal;
 3. Postar conteúdos em geral, como *fanarts* e *fanfics*, por exemplo;
