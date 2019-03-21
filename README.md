@@ -22,7 +22,7 @@ As funcionalidades da aplicação possibilitarão ao usuário:
   	* Imagens  
 	* Personagens Principais  
   
-2. Criar e gerenciar um perfil pessoal;
+2. Criar e gerenciar um perfil pessoal;  
 	No cadastro serão requisitados:  
 	* Nome de usuário  
   	* Apelido  
