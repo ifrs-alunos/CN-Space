@@ -1,4 +1,4 @@
-# Team Syd-Vinicius
+# CN Space
 
 # __Propósito__
 
