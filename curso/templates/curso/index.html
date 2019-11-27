@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if articles %}
+	<br/>
+	{% for article in articles %}
+		<div class="row">
+			<h1 class="display-4"> {{ article.title }}</h1><br/>
+		</div>
+		<div class="row">
+			<h6><p>By: {{ article.reporter.name }}</p></h6>
+		</div>
+		<div class = "row">
+			<p class="lead">{{ article.text }}</p>
+		</div>
+		<div class="row">
+			<a class="btn btn-primary btn-lg" role="button" href="{% url 'curso:article_edit' article.id %}">Edit</a>
+			<a class="btn btn-danger btn-lg" href="{% url 'curso:article_delete' article.id %}">Delete</a>
+		</div>
+		<hr>
+	{% endfor %}
+{% else %}
+	<h2>No articles to show</h2>
+{% endif %}
+
+{% endblock content %}
