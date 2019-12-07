@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Oficina Materialize</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <!--Materialize CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!--Materialize Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--JavaScript: jQuery e Materialize-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.js"></script>
+</head>
+
+<body>
+  {% block menu %}
+
+    <header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="{% url 'curso:index' %}">List Latest articles</a></li>
+        <li><a href="{% url 'curso:article_create' %}">Create a Article</a></li>
+        <li class="divider"></li>
+      </ul>
+
+      <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo" href="{% url 'home' %}" >Home</a>
+
+          <ul class="right hide-on-med-and-down">
+            <li><a href="{% url 'curso:article_create' %}">Create a Article</a></li>
+            <li><a href="{% url 'curso:index' %}">List Latest articles</a></li>
+            <li><a href="#">one</a></li>
+            <li><a href="{% url 'contact' %}">Contact us </a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" data-target="dropdown1">Articles<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+  {% endblock menu %}
+
+
+  {% block content %}
+    <div class="container white z-depth-3">
+      <div class="row">
+        
+        <main class="col s12">
+          <div class="section">
+            <h1>Oficina Materialize</h1>
+            <p>Oficina sobre os recursos e possibilidade do framework CSS Materialize</p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    {% block first_column %}
+      {% endblock first_column %}
+
+      {% block second_column %}
+      {% endblock second_column %}
+
+      {% block third_column %}
+      {% endblock third_column %}
+  {% endblock content %}
+
+
+  <script src="sample.js"></script>
+</body>
+</html>

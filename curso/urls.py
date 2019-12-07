@@ -13,5 +13,6 @@ urlpatterns = [
 	#path('article/list', views.list_articles, name='article_list'),
 	path('article/edit/<int:article_id>', views.edit, name='article_edit'),
 	path('article/delete/<int:article_id>', views.delete, name='article_delete'),
+	path('article/publish/<int:article_id>', views.publish, name='article_publish'),
 	
 	]

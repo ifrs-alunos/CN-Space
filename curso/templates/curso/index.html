@@ -2,24 +2,38 @@
 {% block content %}
 {% if articles %}
 	<br/>
+
 	{% for article in articles %}
+
+	<div class='container'>
 		<div class="row">
-			<h1 class="display-4"> {{ article.title }}</h1><br/>
+			<div class="card" style="width: 800px;">
+			  <div class="card-body">
+			    <h5 class="card-title">{{ article.title }}</h5>
+			    <h6 class="card-subtitle mb-2 text-muted">By: {{ article.reporter.name }}</h6>
+			    <p class="card-text">{{ article.text }}</p>
+
+			    {% if perms.curso.change_article %}
+			    	<a href="{% url 'curso:article_edit' article.id %}" class="card-link">Edit</a>
+			    {% endif %}
+			    {% if perms.curso.delete_article %}
+			    	&nbsp;
+			    	<a href="{% url 'curso:article_delete' article.id %}" class="card-link">Delete</a>
+			    {% endif %}
+
+			    {% if perms.curso.publish_article %}
+			    	&nbsp;
+			    	<a href="{% url 'curso:article_publish' article.id %}" class="card-link">Publish</a>
+			    {% endif %}
+
+			  </div>
 		</div>
-		<div class="row">
-			<h6><p>By: {{ article.reporter.name }}</p></h6>
-		</div>
-		<div class = "row">
-			<p class="lead">{{ article.text }}</p>
-		</div>
-		<div class="row">
-			<a class="btn btn-primary btn-lg" role="button" href="{% url 'curso:article_edit' article.id %}">Edit</a>
-			<a class="btn btn-danger btn-lg" href="{% url 'curso:article_delete' article.id %}">Delete</a>
-		</div>
-		<hr>
+	</div>
+
 	{% endfor %}
 {% else %}
 	<h2>No articles to show</h2>
 {% endif %}
 
 {% endblock content %}
+

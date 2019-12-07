@@ -127,6 +127,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_URL = '/'
+
 STATIC_ROOT = '/home/aluno/Projects/treasure/static'
 
 #from local_settings import *

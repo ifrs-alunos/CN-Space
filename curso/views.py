@@ -1,12 +1,36 @@
 from django.shortcuts import render, get_object_or_404, redirect 
-
 from .models.article import Article 
 from .forms import ArticleForm
+from django.contrib.auth.decorators import login_required, permission_required
 
+@login_required
 def index(request):
-	articles = Article.objects.order_by('-pub_date') [:2]
+	articles = Article.objects.order_by('-pub_date')[:2]
 	context = {'articles': articles}
 	return render(request, 'curso/index.html', context)
+
+@login_required
+@permission_required('curso.publish_article', raise_exception = True)
+def publish(request, article_id):
+	article = get_object_or_404(Article, pk=article_id)
+	try:
+		# Seu codigo para publicar artigos
+		return redirect('curso:index')
+
+	except:
+		#Aqui podem ser armazenadas em log informacoes relevantes
+		context = {}
+		return render(request, 'curso/index.html', context)
+
+
+@login_required
+@permission_required('curso.view_article', raise_exception = True)
+def list_articles(request):
+	articles = Article.objects.order_by('-pub_date')[:2]
+	context = {'articles': articles}
+	return render(request, 'curso/index.html', context)
+
+
 
 def create(request):
 	message = ''

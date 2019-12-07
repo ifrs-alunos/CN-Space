@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Article: {{ article.title }}</h1>
+<div class='container'>
+	<h1>Article: {{ article.title }}</h1>
 
 	{% if error_message %} <p><strong>{{error_message}}</strong></p>{%endif%}
 	{% if message %}
 		<h1>{{message}}</h1>
 	{% else %}
 		{% if action == "edit" %}
-			<form action="{% url 'curso:article_edit' %}" method="post">
+			<form  action="{% url 'curso:article_edit' %}" method="post">
 		{% else %}
 			<form action="{% url 'curso:article_create' %}" method="post">
 		{% endif %}
 		{% csrf_token %}
 		{{ form.as_p}}
 		<input type="submit" value="Save">
-		</form>
+	</form>
+</div>
+
 	{% endif %}
 {% endblock content %}
