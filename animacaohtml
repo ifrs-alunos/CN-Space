@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if animacoes %}
+	<br/>
+
+	<div class='container'>
+		<div class="container">
+			
+		<div>
+		    <table class="table">
+		      <thead class="thead-inverse">
+		        <tr>
+		          <th>Animações</th>
+		          <th>Posts</th>
+		          <th>Last Post</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        {% for animacao in animacoes %}
+		          <tr>
+		            <td>
+		              <a href="#">{{ animacao.nome }}</a><br>
+		              <small style="color: #888">{{ animcao.sinopse}}</small>
+		            </td>
+		            <td class="align-middle">0</td>
+		            <td class="align-middle">0</td>
+		            <td></td>
+		          </tr>
+		        {% endfor %}
+		      </tbody>
+		    </table>
+		</div>
+
+{% else %}
+	<h2>No animations to show</h2>
+{% endif %}
+
+{% endblock content %}
