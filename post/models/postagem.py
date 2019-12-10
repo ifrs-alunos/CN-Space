@@ -1,28 +1,19 @@
+from django.db import models
 from post.models.base import *
 from django.contrib.auth.models import User
-from conta.models.usuario import Usuario
+from django.core.validators import FileExtensionValidator
+from .topic import Topic
 
-class Postagem(models.Model):
-	usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-	data = models.DateField()
-	legenda = models.CharField(max_length=200)
-	numero_curtidas = models.CharField(max_length=900)
-	numero_comentarios = models.CharField(max_length=900)
-	#comentarios = []
-	#tags = []
+class Post(models.Model):
+	message = models.TextField(max_length=4000)
+	topic = models.ForeignKey(Topic, related_name='posts', on_delete=models.CASCADE)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(null=True)
+	created_by = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
+	updated_by = models.ForeignKey(User, null=True, related_name='+', on_delete=models.CASCADE)
 
-	class Meta:
-		pass
+class Meta:
+	pass
 
-	def get_legenda(self):
-		return self.legenda
-
-	def get_numero_comentarios(self):
-		return self.numero_comentarios
-
-	# def get_comentarios(self):
-	# 	return self.comentarios
-
-	# def get_tags(self):
-	# 	return self.tags
+	
 		

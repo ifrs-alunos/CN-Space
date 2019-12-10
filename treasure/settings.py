@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'desenho',
     'post',
-    'conta',
-    'curso'
+    'accounts',
+    'curso',
+    'widget_tweaks',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -127,9 +129,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'home'
 
-LOGOUT_URL = '/'
+LOGOUT_REDIRECT_URL = 'home'
+
+
 
 STATIC_ROOT = '/home/aluno/Projects/treasure/static'
 
