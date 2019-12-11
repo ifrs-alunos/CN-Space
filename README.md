@@ -34,7 +34,7 @@ As funcionalidades da aplicação possibilitarão ao usuário:
 5. Utilizar e acessar *tags* com direcionamento de conteúdo;  
 6. Criar e adicionar animações a uma lista de já assistidos ou que ainda deseja assistir.
 
-#Requisitos para clone:
+# Requisitos para clone:
 1. Instalar widget-tweaks 
 	pip3 install django widget-tweaks 
 2. Instalar crispy-forms 
