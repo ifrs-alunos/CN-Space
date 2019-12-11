@@ -3,6 +3,8 @@
 # Propósito
 
 O propósito deste projeto é desenvolver uma aplicação destinada à comunidade de fãs das diversas animações exibidas, principalmente, no canal de televisão por assinatura Cartoon Network. Para isso, serão unidas informações e conteúdos acerca dessas animações em um site exclusivo, possibilitando ao usuário interagir com  o conteúdo e a comunidade. Isso será possivel através das funcionalidades integradas na aplicação, que dentre elas estão: iniciar discussões e publicar fanarts. Assim, o usuário terá a oportunidade de expressar sua arte, tanto gráfica quanto escrita, em um espaço específico para fãs. 
+ 
+ Vídeo de apresentação: https://www.youtube.com/watch?v=9V4VjvnlhcE&feature=youtu.be
 
 # Desenvolvedores
 
