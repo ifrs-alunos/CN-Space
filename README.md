@@ -35,8 +35,8 @@ As funcionalidades da aplicação possibilitarão ao usuário:
 6. Criar e adicionar animações a uma lista de já assistidos ou que ainda deseja assistir.
 
 # Requisitos para clone:
-1. Instalar widget-tweaks 
+1. Instalar widget-tweaks:  
 	pip3 install django widget-tweaks 
-2. Instalar crispy-forms 
+2. Instalar crispy-forms:  
 	pip3 install django-crispy-forms
 
