@@ -6,12 +6,15 @@
 {% block content%}
 
   <div class="container">
+      
+      <dir class="row"></dir>
       <div class="row">
+      <div class="breadcrumb">
         <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
-        <div class="breadcrumb-item active">{{ board.name }}</div>
+        
         <div class="breadcrumb-item active"><a href="{% url 'post:topic_posts' topic.id %}">{{ topic.subject }}</a></div>
         <div class="breadcrumb-item">Post a reply</div>
-      </div>
+      </div></div>
 
       <form method="post" class="mb-4">
     {% csrf_token %}

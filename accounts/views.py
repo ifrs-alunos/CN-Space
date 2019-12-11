@@ -4,12 +4,13 @@ from django.contrib.auth.forms import AuthenticationForm
 #from django.urls import reverse_lazy
 #from django.contrib.auth.decorators import login_required, permission_required
 #from django import forms
-#from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 #from django.views.decorators.http import require_POST
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .forms import NewUserForm
+from .forms import NewUserForm, UserEditForm
 from django.template import RequestContext
+from django.contrib.auth.forms import UserChangeForm
 
 
 
@@ -63,6 +64,24 @@ def login_request(request):
 def logout_request(request):
 	logout(request)
 	messages.info(request, "Deslogado com sucesso")
-	return redirect("accounts:login")
+	return redirect("login")
+
+#def profile(request):
+	#args = {'user': request.user}
+	#return render(request, "accounts/profile.html", args)
 
 
+def profile(request):
+	if request.method == "POST":
+		form_class = UserEditForm(request.POST, instance=request.user)
+		if form_class.is_valid():  
+			form_class.save()
+			return redirect ('/accounts/profile')
+
+	else:
+		form_class = UserEditForm(instance=request.user)
+		args = {'form_class': form_class}
+		#return render(request, 'accounts/profile.html')
+
+	context = {'form_class': form_class}
+	return render(request, 'accounts/profile.html', context)

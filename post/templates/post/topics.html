@@ -7,9 +7,12 @@
 {% block  content %}
 
   <div class="container">
+    <div class="row"></div>
     <div class="row">
-      <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
-      <div class="breadcrumb-item active">{{ board.name }}</div>
+      <div class="breadcrumb">
+        <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
+        <div class="breadcrumb-item active">{{ board.name }}</div>
+      </div>
     </div>
 
     <div class="row">

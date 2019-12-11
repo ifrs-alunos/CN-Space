@@ -7,11 +7,13 @@
 
 
 	<div class="container">
-	    <div class="row">
-	      <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
-	      <div class="breadcrumb-item active">{{ board.name }}</div>
-	      <div class="breadcrumb-item active">New topic</div>
-	    </div>
+	    <dir class="row"></dir>
+      <div class="row">
+      <div class="breadcrumb">
+        <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
+        <div class="breadcrumb-item active">{{ board.name }}</div>
+      </div>
+    </div>
 
 		<form method="post" novalidate>
   {% csrf_token %}

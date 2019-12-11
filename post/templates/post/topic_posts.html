@@ -6,15 +6,22 @@
 {% block content%}
 
 	<div class="container">
-	    <div class="row">
-	      <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
-	      <div class="breadcrumb-item active">{{ board.name }}</div>
-	      <div class="breadcrumb-item active">{{ topic.subject }}</div>
+		<div class="espaco">
+			<dir class="row"></dir>
+		    <div class="row">
+		      <div class="breadcrumb">
+		        <div class="breadcrumb-item"><a href="{% url 'post:index' %}">Boards</a></div>
+		        <div class="breadcrumb-item active">{{ topic.subject }}</div>
+		      </div>
+	    	</div>
+
+	    	<div class="row">
+	    		<div class="mb-4">
+	    			<a href="{% url 'post:topic_reply' topic.id %}" class="btn btn-primary">Responder</a>
+	    		</div>
+	    	</div>
 	    </div>
 
-	    <div class="mb-4">
-	    	<a href="{% url 'post:topic_reply' topic.id %}" class="btn btn-primary" role="button">Reply</a>
-	    </div>
 		{% for post in topic.posts.all %}
 			<div class="card mb-2 {% if forloop.first %}border-dark{% endif %}">
 			    {% if forloop.first %}

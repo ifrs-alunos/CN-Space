@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Animacao(models.Model):
 	nomee = models.CharField(max_length=200)
+	nome2 = models.CharField(max_length=200)
 	sinopse = models.CharField(max_length=500)
 	status = models.BooleanField(default=True)
 
