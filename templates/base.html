@@ -50,6 +50,12 @@
       	height: 250px;
       }
 
+      footer {
+        font-size: 11pt;
+        background-color: #241F1E;
+        color: white;
+      }
+
     </style>
 
     <title>Hello, world!</title>
@@ -67,9 +73,7 @@
                 <li class="nav-item">
                   <a class="btn btn-outline-secondary" href="{% url 'post:index' %}">Fórum</a> <!--criar url automatica-->
                 </li>
-                <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="{% url 'contact' %}">Contact us</a>
-                </li>
+               
 
 
                 <li class="nav-item dropdown">
@@ -157,45 +161,23 @@
               
             </div>
           </div>
+        </div>
+      </div>
 
+        <footer class="page-footer font-small blue">
 
-          </div>
-            <table class="table">
-              <thead class="thead-inverse">
-                <tr>
-                  <th>Animações</th>
-                  <th>Posts</th>
+        <div class="container">
+        <div class="footer-copyright text-left py-3">
+          <ul>
+          <li>Desenvolvedores - <a href="{% url 'contact' %}">Contact us</a> </li>
+            <div>Isaac Bueno - isadbc42@gmail.com | Mateus Freitas - mateusfc100@gmail.com | Pietra Rodrigues - pietra_rodrigues2001@hotmail.com</div>
+          </ul>
 
-                </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td>
-                      
-                      <a href="{%url 'desenho:animacao_steven'%}">Steven Universo</a><br>
-                      <small style="color: #888">É a história de amadurecimento de um menino, Steven Universe, que mora com as Crystal Gems - seres intergaláticos mágicos. As chamadas Garnet, Pérola e Ametista - na cidade fictícia de Beach City. Steven, que é meio gem, tem aventuras com seus amigos e ajuda as gems a proteger o mundo de sua própria espécie corrompida.</small>
-                    </td>
-                    <td class="align-middle">0</td>
-                </tr>
-                <tr>
-                    <td>
-                      <a href="{%url 'desenho:animacao_aventura'%}">Hora de Aventura</a><br>
-                      <small style="color: #888"> A série segue as aventuras de Finn , um garoto humano aventureiro, e o seu melhor amigo e irmão adotivo Jake, um cão com poderes que lhe permitem alterar a forma e tamanho conforme a sua vontade. Finn e Jake habitam a pós-apocalíptica Terra de Ooo, onde interagem com os outros personagens.</small>
-                    </td>
-                    <td class="align-middle">0</td>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                      <a href="{%url 'desenho:animacao_gumball'%}">O Incrível Mundo de Gumball</a><br>
-                      <small style="color: #888">A série gira em torno de Gumball Watterson, um gato azul de 12 anos de idade, que frequenta a escola secundária na cidade de Elmore. Acompanhado por seu irmão peixinho, Darwin, os dois frequentemente se vêem envolvidos em várias confusões em diversos locais da cidade.</small>
-                    </td>
-                    <td class="align-middle">0</td>
-                    </td>
-                </tr>
-              </tbody>
-            </table>
-    </div>
+          
+        </div>
+      <!-- Copyright -->
+    </footer>
+    
 {%endblock content%}
 
     <!-- Optional JavaScript -->

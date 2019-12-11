@@ -4,7 +4,7 @@
 {% block title %}Entrar{% endblock %}
 
 {% block content %}
-<br>
+<dir class="row"></dir>
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <div class="card  auth-card">
@@ -17,6 +17,7 @@
         
                     {{ form_class|crispy }}
 
+                    <dir class="row"></dir>
                     <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                 </form>
 

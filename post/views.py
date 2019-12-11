@@ -44,6 +44,8 @@ def create(request, board_id):
     return render(request, 'post/new_topic.html', {'board': board, 'form': form})
 
 
+
+
 def posts(request, topic_id):
     topic = get_object_or_404(Topic, pk=topic_id)
     return render(request, 'post/topic_posts.html', {'topic': topic})

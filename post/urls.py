@@ -12,6 +12,7 @@ urlpatterns = [
 	path('board/topics/<int:board_id>/', views.topics, name='board_topics'),
 	path('board/create/<int:board_id>/', views.create, name='board_create'),
 	path('topic/posts/<int:topic_id>', views.posts, name='topic_posts'),
+	
 	path('topic/reply/<int:topic_id>', views.reply, name='topic_reply'),
 
 

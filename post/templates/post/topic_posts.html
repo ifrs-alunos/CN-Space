@@ -15,11 +15,15 @@
 		      </div>
 	    	</div>
 
+
+
 	    	<div class="row">
 	    		<div class="mb-4">
-	    			<a href="{% url 'post:topic_reply' topic.id %}" class="btn btn-primary">Responder</a>
+	    			<a href="{% url 'post:topic_reply' topic.id %}" class="btn btn-primary">Novo Comentário</a>
 	    		</div>
 	    	</div>
+
+
 	    </div>
 
 		{% for post in topic.posts.all %}
