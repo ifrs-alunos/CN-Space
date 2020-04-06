@@ -9,7 +9,7 @@ O propósito deste projeto é desenvolver uma aplicação destinada à comunidad
 # Desenvolvedores
 
 Os responsáveis pelo desenvolvimento deste projeto são os alunos do Instituto Federal do Rio Grande do Sul - *Campus* Vacaria do curso Técnico em Multimídia integrado ao Ensino Médio:
-1. Isadora Bueno do Canto;
+1. Isaac Bueno do Canto;
 2. Mateus Freitas Charloto;
 3. Pietra Rodrigues Rosa.
 
